@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+    <title>Game of Life</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="gameoflife.js"></script>
+    <style>
+        td {
+            border: solid 1px silver;
+            width: 20px
+        }
+        td.alive {background-color:green;}
+    </style>
+</head>
+<body>
+<h1>Game of Life Demo</h1>
+<table id='main'/>
+<button type='button' onclick='placeRandomCells()'>Reset</button>
+<button type='button' onclick='playGame()'>Play Game</button>
+</body>
+</html>
