@@ -92,13 +92,15 @@ function getLiveNeighbourCount(x, y) {
 }
 
 function isCellAlive(x, y){
+    if (x>= dimension || x < 0) {
+        return false;
+    }
+    if (y>= dimension || y < 0) {
+        return false;
+    }
     return getCell(x, y).attr('class') === 'alive';
 }
 
 function getCell(x, y) {
-    if (x >= dimension) {x = 0;}
-    if (y >= dimension) {y = 0;}
-    if (x < 0) {x = dimension - 1;}
-    if (y < 0) {y = dimension - 1;}
     return $(cells[y * dimension + x]);
 }
